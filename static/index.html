@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory Tracker</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Inventory Tracker</h1>
+
+    <section id="stats" class="stats"></section>
+
+    <section class="toolbar">
+      <input id="search" type="search" placeholder="Search by name…">
+    </section>
+
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Qty</th><th></th></tr>
+      </thead>
+      <tbody id="items"></tbody>
+    </table>
+
+    <div class="pager">
+      <button id="prev">&larr; Prev</button>
+      <span id="page-info"></span>
+      <button id="next">Next &rarr;</button>
+    </div>
+
+    <h2>Add item</h2>
+    <form id="add-form">
+      <input name="name" placeholder="Name" required>
+      <input name="category" placeholder="Category">
+      <input name="price" type="number" step="0.01" min="0" placeholder="Price" required>
+      <input name="quantity" type="number" step="1" min="0" placeholder="Quantity" required>
+      <button type="submit">Add</button>
+    </form>
+    <p id="message" role="status"></p>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
